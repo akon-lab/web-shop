@@ -106,44 +106,6 @@
      transform: translate(-50%, -50%);
  }
  
- #popup {
-     display: table;
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     z-index: 30;
-     height: 100%;
-     width: 100%;
-     background: rgba(250, 244, 226, 0.8);
-     visibility: hidden;
-     animation: popup 1s 1s forwards;
-     cursor: pointer;
- }
- 
- @keyframes popup {
-     from {
-         visibility: hidden;
-     }
-     to {
-         visibility: visible;
-     }
- }
- 
- #popup .come-up-card {
-     background-repeat: no-repeat;
-     background-size: contain;
-     background-position: top;
-     width: 500px;
- }
- 
- .come-up-card div {
-     margin-top: 82%;
-     background-color: blanchedalmond;
-     text-align: center;
-     opacity: 0.8;
- }
  
  @media(max-device-width:770px) {
      .category {
@@ -154,9 +116,7 @@
      .product {
          width: 30%;
      }
-     #popup .come-up-card {
-         margin-top: 20%;
-     }
+     
  }
  
  @media(max-device-width:415px) {
@@ -168,8 +128,5 @@
      .product {
          width: 40%;
      }
-     #popup .come-up-card {
-         width: 300px;
-         margin-top: 40%;
-     }
+    
  }
