@@ -1,0 +1,84 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#desk {
+    display: none;
+    height: 0;
+    width: 100%;
+    padding: 1%;
+    text-align: justify;
+    transition: 1s ease-in-out;
+}
+
+.catalogue,
+.filter {
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 0.5%;
+    width: 20%;
+    flex-grow: 1;
+    flex-basis: auto;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.product img {
+    display: block;
+}
+
+.product .pr-body {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.product:hover .pr-body,
+.product:active .pr-body {
+    opacity: 1;
+}
+
+.product .pr-body p {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sales {
+    width: 80%;
+    border-radius: 8px;
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+}
+
+@media(max-device-width:770px) {
+    .product {
+        width: 30%;
+    }
+}
+
+@media(max-device-width:415px) {
+    .product {
+        width: 40%;
+    }
+}
